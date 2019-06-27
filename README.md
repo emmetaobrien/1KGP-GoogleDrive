@@ -30,7 +30,7 @@ Downloading datasets:
  
 ```
     git annex init
-    git_annex_remote_googledrive setup
+    git-annex-remote-googledrive setup
     datalad siblings -d "</full/path/to/your_project>" enable -s google
 ```
 
@@ -46,7 +46,7 @@ Example:
   datalad install -r http://github.com/emmetaobrien/conp-dataset
   cd conp-dataset/projects/1KGP-GoogleDrive-27Jun2019
   git annex init
-  git_annex_remote_googledrive setup
+  git-annex-remote-googledrive setup
   datalad siblings -d "/home/emmetaobrien/conp-dataset/projects/1KGP-GoogleDrive-27Jun2019" enable -s google
   datalad get *
 ```
