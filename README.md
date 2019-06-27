@@ -26,16 +26,11 @@ Downloading datasets:
 
 4. For each project you are interested in: (e.g. conp-dataset/projects/<your_project>):
 
-    - In the project's directory, set up the Google Drive remote:
+    - In the project's directory, set up and connect the Google Drive remote:
  
 ```
     git annex init
     git_annex_remote_googledrive setup
-```
-
-    - Connect the project's directory to the google remote:
-
-```
     datalad siblings -d "</full/path/to/your_project>" enable -s google
 ```
 
