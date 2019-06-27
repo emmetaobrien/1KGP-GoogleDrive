@@ -23,6 +23,7 @@ Downloading datasets:
   * In the project's directory, set up the Google Drive remote:
  
 >  git annex init
+
 >  git_annex_remote_googledrive setup
 
   * Connect the project's directory to the google remote
