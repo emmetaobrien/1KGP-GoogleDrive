@@ -4,48 +4,58 @@ To download data from Google Drive:
 
 Initial setup:
 
-* If you do not have pip3 installed:
+1. If you do not have pip3 installed:
 
+```
     sudo apt install python3-pip
+```
 
-* Install the git annex remote for Google Drive:
+2. Install the git annex remote for Google Drive:
 
+```
     pip3 install git-annex-remote-googledrive
+```
 
 Downloading datasets:
 
-* download the CONP dataset from your fork of the repository:
+3. download the CONP dataset from your fork of the repository:
 
+```
     datalad install -r http://github.com/<your_user_name>/conp-dataset
+```
 
-* For each project you are interested in: (e.g. conp-dataset/projects/<your_project>):
+4. For each project you are interested in: (e.g. conp-dataset/projects/<your_project>):
 
-    In the project's directory, set up the Google Drive remote:
+    - In the project's directory, set up the Google Drive remote:
  
+```
     git annex init
     git_annex_remote_googledrive setup
+```
 
-    Connect the project's directory to the google remote:
+    - Connect the project's directory to the google remote:
 
+```
     datalad siblings -d "</full/path/to/your_project>" enable -s google
+```
 
-* Retrieve the files of interest as with other backends
+5. Retrieve the files of interest as with other backends
 
->  datalad get <your_file_name>
+```
+    datalad get <your_file_name>
+```
 
 Example:
 
->  datalad install -r http://github.com/emmetaobrien/conp-dataset
+```
+  datalad install -r http://github.com/emmetaobrien/conp-dataset
+  cd conp-dataset/projects/1KGP-GoogleDrive-27Jun2019
+  git annex init
+  git_annex_remote_googledrive setup
+  datalad siblings -d "/home/emmetaobrien/conp-dataset/projects/1KGP-GoogleDrive-27Jun2019" enable -s google
+  datalad get *
+```
 
->  cd conp-dataset/projects/1KGP-GoogleDrive-27Jun2019
-
->  git annex init
-
->  git_annex_remote_googledrive setup
-
->  datalad siblings -d "/home/emmetaobrien/conp-dataset/projects/1KGP-GoogleDrive-27Jun2019" enable -s google
-
->  datalad get *
 
 Notes:
 
