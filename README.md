@@ -26,7 +26,7 @@ Downloading datasets:
 
 >  git_annex_remote_googledrive setup
 
-  * Connect the project's directory to the google remote
+    * Connect the project's directory to the google remote
 
 >  datalad siblings -d "</full/path/to/your_project>" enable -s google
 
