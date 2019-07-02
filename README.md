@@ -16,7 +16,10 @@ Initial setup:
     pip3 install git-annex-remote-googledrive
 ```
 
+Steps 1 and 2 only need to be done once.
+
 Downloading datasets:
+
 
 3. download the CONP dataset from your fork of the repository:
 
@@ -24,17 +27,26 @@ Downloading datasets:
     datalad install -r http://github.com/<your_user_name>/conp-dataset
 ```
 
-4. For each project you are interested in: (e.g. conp-dataset/projects/<your_project>):
-
-    - In the project's directory, set up and connect the Google Drive remote:
+4. For each project you are interested in: (e.g. conp-dataset/projects/<your_project>) set up the Google Drive remote in that project's directory:
  
 ```
     git annex init
     git-annex-remote-googledrive setup
+```
+
+  The `git-annex-remote-googledrive setup` command provides a link to download an authorisation code.
+
+a.  Open this link and connect it to a Google account, which will give you an authorisation code.
+
+b.  Copy and paste the code into your terminal window to complete setting up the Google Drive remote.
+
+c.  Connect the project to the Google Drive remote: 
+
+```
     datalad siblings -d "</full/path/to/your_project>" enable -s google
 ```
 
-5. Retrieve the files of interest as with other backends
+d. Retrieve the files of interest as with other backends
 
 ```
     datalad get <your_file_name>
@@ -56,7 +68,7 @@ Notes:
 
 * Only the version of git-annex-remote-googledrive installed with pip3 is observed to work for this process; using older versions of pip can cause problems.
 
-* If the Google Drive remote is not correctly set up, the project directory will appear to contain correctly formed links, but they will not connect to anything.
+* If the Google Drive remote is not correctly set up, the project directory will appear to contain correctly formed git-annex links, but they will not connect to anything.
 
 
 
