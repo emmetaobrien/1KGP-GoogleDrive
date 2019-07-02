@@ -34,7 +34,7 @@ Downloading datasets:
     git-annex-remote-googledrive setup
 ```
 
-  The `git-annex-remote-googledrive setup` command provides a link to download an authorisation code.
+  The `git-annex-remote-googledrive setup` command provides a link to authorise the Google Drive remote.
 
 a.  Open this link and connect it to a Google account, which will give you an authorisation code.
 
